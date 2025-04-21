@@ -10,7 +10,6 @@ import org.springframework.stereotype.Service;
 
 import com.teste.primeiro_exemplo.model.Produto;
 import com.teste.primeiro_exemplo.model.exception.ResourceNotFoundException;
-// import com.teste.primeiro_exemplo.repository.ProdutoRepository;
 import com.teste.primeiro_exemplo.repository.ProdutoRepository;
 import com.teste.primeiro_exemplo.shared.ProdutoDTO;
 
@@ -103,7 +102,7 @@ public class ProdutoService {
         ModelMapper mapper = new ModelMapper();
 
         //converter o DTO em um Produto
-        Produto produto = mapper.map(produtoDto, Produto.class)
+        Produto produto = mapper.map(produtoDto, Produto.class);
 
         //atualizar o produto no banco
         produtoRepository.save(produto);
