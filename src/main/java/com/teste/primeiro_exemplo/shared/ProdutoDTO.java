@@ -1,16 +1,7 @@
-package com.teste.primeiro_exemplo.model;
+package com.teste.primeiro_exemplo.shared;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+public class ProdutoDTO {
 
-@Entity
-public class Produto {
-
-    //#region Atributos
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
     private String nome;
@@ -20,9 +11,7 @@ public class Produto {
     private Double valor;
 
     private String observacao;
-    //#endregion
 
-    //#region Getters e Setters
     public Integer getId() {
         return id;
     }
@@ -62,6 +51,4 @@ public class Produto {
     public void setObservacao(String observacao) {
         this.observacao = observacao;
     }
-    //#endregion
-    
 }
